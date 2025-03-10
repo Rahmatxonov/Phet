@@ -37,19 +37,22 @@ const Simulation = () => {
   }, [selectedCategory, selectedType, searchQuery]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="max-w-7xl mx-auto px-4 py-8 mt-24">
       {/* Filters */}
-      <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+      <div className="bg-white rounded-xl shadow-[0px_5px_17px_1px_rgba(0,_0,_0,_0.1)] p-6 mb-8">
         <div className="grid md:grid-cols-3 gap-6">
           {/* Search */}
           <div>
-            <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="search"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Qidirish
             </label>
             <input
               type="text"
               id="search"
-              className="w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="w-full rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 outline-none p-3"
               placeholder="Simulyatsiya nomini kiriting..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -58,12 +61,15 @@ const Simulation = () => {
 
           {/* Category Filter */}
           <div>
-            <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="category"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Kategoriya
             </label>
             <select
               id="category"
-              className="w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="w-full rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 outline-none p-3"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
@@ -77,12 +83,15 @@ const Simulation = () => {
 
           {/* Type Filter */}
           <div>
-            <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="type"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Turi
             </label>
             <select
               id="type"
-              className="w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+              className="w-full rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 outline-none p-3"
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
             >
@@ -99,7 +108,9 @@ const Simulation = () => {
       {/* Results count */}
       <div className="mb-6">
         <p className="text-gray-600">
-          Jami: <span className="font-semibold">{filteredSimulations.length}</span> ta simulyatsiya
+          Jami:{' '}
+          <span className="font-semibold">{filteredSimulations.length}</span> ta
+          simulyatsiya
         </p>
       </div>
 

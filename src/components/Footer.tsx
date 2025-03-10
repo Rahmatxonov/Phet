@@ -1,15 +1,15 @@
-import React from 'react';
 import { Github, Mail, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white mt-auto">
+    <footer className="bg-gray-900 text-white mt-auto w-full">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+          <div className="text-center w-[300px]">
             <h3 className="text-xl font-bold mb-4">PhysicsLab</h3>
             <p className="text-gray-400">
-              Fizika fanini o'rganish uchun interaktiv simulyatsiyalar platformasi
+              Fizika fanini o'rganish uchun interaktiv simulyatsiyalar
+              platformasi
             </p>
           </div>
           <div>
@@ -37,7 +37,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} PhysicsLab. Barcha huquqlar himoyalangan.</p>
+          <p>
+            &copy; {new Date().getFullYear()} PhysicsLab. Barcha huquqlar
+            himoyalangan.
+          </p>
         </div>
       </div>
     </footer>
